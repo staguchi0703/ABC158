@@ -16,6 +16,20 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('C', num_list)
+A, B = [int(item) for item in input().split()]
+is_found = False
 
+for i in range(10001):
+    A_cal = int(i * 0.08)
+    B_cal = int(i * 0.10)
+
+    if A_cal == A and B_cal == B:
+        print(i)
+        is_found = True
+        break
+    
+if not is_found:
+    print(-1)
+
+
+        

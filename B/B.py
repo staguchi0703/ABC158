@@ -16,6 +16,12 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('B', num_list)
+N, A, B = [int(item) for item in input().split()]
 
+unit_num = A + B
+
+unit_b = (N // unit_num) * A
+
+temp_num = min(A, N % unit_num)
+
+print(unit_b + temp_num)
